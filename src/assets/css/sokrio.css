@@ -1,0 +1,116 @@
+/*.form-control.is-valid, .was-validated .form-control:valid {*/
+/*    background-image: none;*/
+/*    border-color: #cccccc;*/
+/*}*/
+
+.ant-table,
+.ant-table-thead > tr > th {
+  color: var(--default-text-color) !important;
+  border-color: var(--default-border);
+  background: var(--custom-white) !important;
+}
+.ant-table-cell-row-hover {
+  color: var(--bs-dark) !important;
+  background: var(--bs-tertiary-bg) !important;
+}
+.ant-table-row-selected {
+  color: var(--bs-dark) !important;
+}
+.ant-table-column-sort {
+  color: var(--default-text-color) !important;
+  background: var(--custom-white) !important;
+}
+.ant-table-column-sort.ant-table-cell-row-hover {
+  color: var(--bs-dark) !important;
+  background: var(--bs-tertiary-bg) !important;
+}
+
+.ant-table-row-selected .ant-table-column-sort {
+  color: var(--bs-dark) !important;
+  background: #e1faeb !important;
+}
+
+.ant-table-expanded-row-fixed {
+  background: var(--custom-white) !important;
+}
+
+.ant-table-expanded-row-fixed .ant-empty-description {
+  color: var(--default-text-color) !important;
+}
+
+.ant-modal-content,
+.ant-modal-header {
+  background: var(--custom-white) !important;
+}
+.ant-modal-content .ant-modal-title,
+.ant-modal-content .ant-modal-close {
+  color: var(--default-text-color) !important;
+}
+/* .ant-table-selection-extra .anticon {
+  color: var(--default-text-color) !important;
+} */
+
+.ant-select,
+.ant-select .ant-select-selector {
+  background: var(--form-control-bg) !important;
+  color: var(--default-text-color) !important;
+}
+.ant-select .ant-select-selector {
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-color: var(--input-border) !important;
+}
+.ant-select .ant-select-selector .ant-select-selection-placeholder {
+  color: var(--default-text-color) !important;
+  opacity: 0.5;
+}
+.ant-select .ant-select-arrow {
+  color: var(--default-text-color) !important;
+}
+.ant-select-dropdown {
+  background: var(--custom-white) !important;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-color: var(--input-border) !important;
+}
+.ant-select-dropdown .ant-select-item-option-content {
+  color: var(--default-text-color) !important;
+}
+.ant-select-dropdown .rc-virtual-list-scrollbar-thumb {
+  background: var(--default-text-color) !important;
+}
+.ant-radio-group .ant-radio-button-wrapper {
+  background: var(--custom-white) !important;
+  color: var(--default-text-color) !important;
+}
+
+.card,
+.card-body {
+  color: var(--default-text-color) !important;
+  background: var(--custom-white) !important;
+}
+
+.ant-tree {
+  color: var(--default-text-color) !important;
+  background: var(--custom-white) !important;
+}
+
+.ant-input {
+  background: var(--form-control-bg) !important;
+  color: var(--default-text-color) !important;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-color: var(--input-border) !important;
+}
+
+.ant-checkbox-group,
+.ant-checkbox-wrapper span,
+.ant-form-item-label label {
+  color: var(--default-text-color) !important;
+}
+
+[data-theme-mode="dark"] .ant-checkbox-wrapper .ant-checkbox-inner {
+  background: var(--input-border) !important;
+  border-color: var(--input-border) !important;
+}
+
+.btn-group .btn {
+  padding: 0.26rem 0.5rem !important;
+}

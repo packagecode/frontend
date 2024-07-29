@@ -1,0 +1,7 @@
+[
+  {"order": "Order"},
+  {"requisition": "Requisition"},
+  {"salesReturn": "Sales Return"},
+  {"invoice": "Invoice"},
+  {"department": "Department"}
+]

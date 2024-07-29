@@ -1,0 +1,72 @@
+[
+  {
+    "name": "requisitionAccepted",
+    "format": "Hello {buyer}, \nInvoice ID {invoice} has been accepted. Total amount is {amount}.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "requisitionPaid",
+    "format": "Hello {buyer}, \nAmount {amount} for the invoice ID {invoice} has been paid by the {buyer}.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "requisitionOnTheWay",
+    "format": "Hello {buyer}, \nRequisition of invoice ID {invoice} has been dispatched and currently in transit.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "requisitionDelivered",
+    "format": "Hello {buyer}, \nRequisition of invoice ID {invoice} has been delivered successfully.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "orderAccepted",
+    "format": "Hello {buyer}, \nInvoice ID {invoice} has been accepted. Total amount is {amount}.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "orderPaid",
+    "format": "Hello {buyer}, \nAmount {amount} for the invoice ID {invoice} has been paid by the {buyer}.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "orderOnTheWay",
+    "format": "Hello {buyer}, \nOrder of invoice ID {invoice} has been dispatched and currently in transit.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "orderDelivered",
+    "format": "Hello {buyer}, \nOrder of Invoice ID {invoice} has been delivered successfully.",
+    "enabled": false,
+    "recipient": "buyer"
+  },
+  {
+    "name": "paymentCollection",
+    "format": "Hello {buyer}, Payment of Invoice ID {invoice} has been {status}.",
+    "enabled": false,
+    "recipient": "buyer",
+    "trigger": {
+        "pending": false,
+        "accepted": false,
+        "rejected": false
+    }
+  },
+  {
+    "name": "walletCollection",
+    "format": "Hello {buyer}, we've received {amount} collected by {fieldforce}. Transaction status is {status}. It will be reflected in your wallet shortly.",
+    "enabled": false,
+    "recipient": "buyer",
+    "trigger": {
+        "pending": false,
+        "accepted": false,
+        "rejected": false
+    }
+  }
+]
