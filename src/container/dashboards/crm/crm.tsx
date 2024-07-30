@@ -31,7 +31,7 @@ const Crm: FC<CrmProps> = () => {
   // for User search function
   const [Data, setData] = useState(Dealsstatistics);
   const user = useSelector((state: RootState) => state.user);
-
+  const cdn = import.meta.env.VITE_APP_ASSET_URL;
   const userdata: any = [];
   const myFunction = (idx: any) => {
     let Data;
@@ -138,7 +138,7 @@ const Crm: FC<CrmProps> = () => {
                         <div className="d-flex align-items-top flex-wrap">
                           <div className="me-2">
                             <span className="avatar avatar-sm avatar-rounded">
-                              <img src={face10} alt="" />
+                              <img src={`${cdn}${face10}`} alt="" />
                             </span>
                           </div>
                           <div className="flex-fill">
@@ -170,7 +170,7 @@ const Crm: FC<CrmProps> = () => {
                         <div className="d-flex align-items-top flex-wrap">
                           <div className="me-2">
                             <span className="avatar avatar-sm avatar-rounded">
-                              <img src={face12} alt="" />
+                              <img src={`${cdn}${face12}`} alt="" />
                             </span>
                           </div>
                           <div className="flex-fill">
@@ -520,7 +520,7 @@ const Crm: FC<CrmProps> = () => {
                             <td>
                               <div className="d-flex align-items-center fw-semibold">
                                 <span className="avatar avatar-sm me-2 avatar-rounded">
-                                  <img src={idx.src} alt="img" />
+                                  <img src={`${cdn}${idx.src}`} alt="img" />
                                 </span>
                                 {idx.name}
                               </div>

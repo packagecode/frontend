@@ -17,9 +17,13 @@ const RequiredClientCheck: React.FC<CheckRouteProps> = () => {
         const stores = store.getState();
         await validateClient(stores.domain);
         setIsChecked(true);
-      } catch {
-        showToast("error", "Client not found!");
-        navigate("/404", { replace: true });
+      } catch (error: any) {
+        if (error.response?.status === 419) {
+          window.location.reload();
+        } else {
+          showToast("error", "Client not found!");
+          navigate("/404", { replace: true });
+        }
       }
     };
 

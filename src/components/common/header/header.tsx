@@ -49,7 +49,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const cdn = import.meta.env.VITE_APP_ASSET_URL;
   ///*** */
   const [fullScreen, setFullScreen] = useState(false);
 
@@ -401,16 +401,36 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   to={`${import.meta.env.BASE_URL}dashboards`}
                   className="header-logo"
                 >
-                  <img src={desktoplogo} alt="logo" className="desktop-logo" />
-                  <img src={togglelogo} alt="logo" className="toggle-logo" />
-                  <img src={desktopdark} alt="logo" className="desktop-dark" />
-                  <img src={toggledark} alt="logo" className="toggle-dark" />
                   <img
-                    src={desktopwhite}
+                    src={`${cdn}${desktoplogo}`}
+                    alt="logo"
+                    className="desktop-logo"
+                  />
+                  <img
+                    src={`${cdn}${togglelogo}`}
+                    alt="logo"
+                    className="toggle-logo"
+                  />
+                  <img
+                    src={`${cdn}${desktopdark}`}
+                    alt="logo"
+                    className="desktop-dark"
+                  />
+                  <img
+                    src={`${cdn}${toggledark}`}
+                    alt="logo"
+                    className="toggle-dark"
+                  />
+                  <img
+                    src={`${cdn}${desktopwhite}`}
                     alt="logo"
                     className="desktop-white"
                   />
-                  <img src={togglewhite} alt="logo" className="toggle-white" />
+                  <img
+                    src={`${cdn}${togglewhite}`}
+                    alt="logo"
+                    className="toggle-white"
+                  />
                 </Link>
               </div>
             </div>
@@ -447,7 +467,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                 data-bs-toggle="dropdown"
               >
                 <img
-                  src={us}
+                  src={`${cdn}${us}`}
                   alt="img"
                   className="rounded-circle header-link-icon"
                 />
@@ -464,7 +484,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={us} alt="img" />
+                    <img src={`${cdn}${us}`} alt="img" />
                   </span>
                   English
                 </Dropdown.Item>
@@ -474,7 +494,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={spain} alt="img" />
+                    <img src={`${cdn}${spain}`} alt="img" />
                   </span>
                   Spanish
                 </Dropdown.Item>
@@ -484,7 +504,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={french} alt="img" />
+                    <img src={`${cdn}${french}`} alt="img" />
                   </span>
                   French
                 </Dropdown.Item>
@@ -494,7 +514,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={germany} alt="img" />
+                    <img src={`${cdn}${germany}`} alt="img" />
                   </span>
                   German
                 </Dropdown.Item>
@@ -504,7 +524,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={italy} alt="img" />
+                    <img src={`${cdn}${italy}`} alt="img" />
                   </span>
                   Italian
                 </Dropdown.Item>
@@ -514,7 +534,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                   href="#"
                 >
                   <span className="avatar avatar-xs lh-1 me-2">
-                    <img src={russia} alt="img" />
+                    <img src={`${cdn}${russia}`} alt="img" />
                   </span>
                   Russian
                 </Dropdown.Item>
@@ -585,7 +605,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                     >
                       <div className="d-flex align-items-start cart-dropdown-item">
                         <img
-                          src={idx.src}
+                          src={`${cdn}${idx.src}`}
                           alt="img"
                           className="avatar avatar-sm avatar-rounded br-5 me-3"
                         />
@@ -790,7 +810,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={figma} alt="" />
+                            <img src={`${cdn}${figma}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Figma</span>
                         </div>
@@ -800,7 +820,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={powerpoint} alt="" />
+                            <img src={`${cdn}${powerpoint}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Power Point</span>
                         </div>
@@ -810,7 +830,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={word} alt="" />
+                            <img src={`${cdn}${word}`} alt="" />
                           </span>
                           <span className="d-block fs-12">MS Word</span>
                         </div>
@@ -820,7 +840,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={calender} alt="" />
+                            <img src={`${cdn}${calender}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Calendar</span>
                         </div>
@@ -830,7 +850,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={sketch} alt="" />
+                            <img src={`${cdn}${sketch}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Sketch</span>
                         </div>
@@ -840,7 +860,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={googledocs} alt="" />
+                            <img src={`${cdn}${googledocs}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Docs</span>
                         </div>
@@ -850,7 +870,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={google} alt="" />
+                            <img src={`${cdn}${google}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Google</span>
                         </div>
@@ -860,7 +880,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={translate} alt="" />
+                            <img src={`${cdn}${translate}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Translate</span>
                         </div>
@@ -870,7 +890,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                       <Link to="#">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
-                            <img src={googlesheets} alt="" />
+                            <img src={`${cdn}${googlesheets}`} alt="" />
                           </span>
                           <span className="d-block fs-12">Sheets</span>
                         </div>
@@ -908,7 +928,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                 <div className="d-flex align-items-center">
                   <div className="me-sm-2 me-0">
                     <img
-                      src={user?.propic_url || face9}
+                      src={user?.propic_url || `${cdn}${face9}`}
                       alt="img"
                       width="32"
                       height="32"

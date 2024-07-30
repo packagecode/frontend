@@ -85,7 +85,7 @@
 .card,
 .card-body {
   color: var(--default-text-color) !important;
-  background: var(--custom-white) !important;
+  /* background: var(--custom-white) !important; */
 }
 
 .ant-tree {

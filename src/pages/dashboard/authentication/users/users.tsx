@@ -32,7 +32,7 @@ const users = () => {
   const [viewUser, setViewUser] = useState<boolean>(false);
   const [createBulkUsers, setCreateBulkUsers] = useState<boolean>(false);
   const formatDateTime = useDateTimeFormat();
-  const { axiosInstance, api } = useAxiosInstance();
+  const { axiosInstance, api, cdn } = useAxiosInstance();
   const authUser = useSelector((state: any) => state.user);
   const { toQueryString, downloadFile, hasPermission } = useGlobalServices();
   const [selectedData, setSelectedData] = useState({
@@ -64,7 +64,7 @@ const users = () => {
           <>
             <div className="d-flex align-items-center">
               <div className="avatar avatar-sm me-2 avatar-rounded">
-                <img src={avatar} alt="img" />
+                <img src={`${cdn()}${avatar}`} alt="img" />
               </div>
               <b style={{ marginLeft: "1rem" }}>{name}</b>
             </div>

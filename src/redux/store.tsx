@@ -9,6 +9,16 @@ import reducer from "./reducer";
 const authenticateUser = (tempStore: any) => {
   const tempState = tempStore.getState();
   const isLogin = localStorage.getItem("isLogin");
+  axios.get(
+    `${tempState.apiEndPoint.replace("api/v1", "")}sanctum/csrf-cookie`,
+    {
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    }
+  );
   if (isLogin && isLogin === "true" && tempState.user?.name) {
     axios.get(`${tempState.apiEndPoint}/me`, {
       withCredentials: true,
@@ -25,7 +35,6 @@ const loadState = () => {
   try {
     const host = window.location.host; // e.g., subdomain.example.com
     const subdomain = host.split(".")[0]; // Extract the subdomain
-
     // Create a temporary store to dispatch the SetSubdomain action
     const tempStore = configureStore({
       reducer: reducer,
@@ -50,7 +59,7 @@ const middleware: Middleware[] = [thunk]; // Define an array of middleware
 
 const store = configureStore({
   reducer: reducer,
-  middleware: middleware, // Pass the middleware array
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(middleware), // Pass the middleware array
   preloadedState
 });
 

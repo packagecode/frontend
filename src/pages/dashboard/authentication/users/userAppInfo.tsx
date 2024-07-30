@@ -15,7 +15,7 @@ const userAppInfo = () => {
   const [entities, setEntities] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [downloading, setDownloading] = useState<boolean>(false);
-  const { axiosInstance, api } = useAxiosInstance();
+  const { axiosInstance, api, cdn } = useAxiosInstance();
   const { toQueryString, downloadFile } = useGlobalServices();
   const formatDateTime = useDateTimeFormat();
   const [pagination, setPagination] = useState<TablePaginationConfig>({
@@ -101,7 +101,7 @@ const userAppInfo = () => {
           <>
             <div className="d-flex align-items-center">
               <div className="avatar avatar-sm me-2 avatar-rounded">
-                <img src={avatar} alt="img" />
+                <img src={`${cdn()}${avatar}`} alt="img" />
               </div>
               <b style={{ marginLeft: "1rem" }}>{name}</b>
             </div>

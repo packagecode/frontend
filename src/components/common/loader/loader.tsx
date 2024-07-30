@@ -5,10 +5,10 @@ const Loader = () => {
   //   console.log("Working");
 
   // });
-
+  const cdn = import.meta.env.VITE_APP_ASSET_URL;
   return (
     <div id="loader">
-      <img src={loader} className="loader-img" alt="Loader" />
+      <img src={`${cdn}${loader}`} className="loader-img" alt="Loader" />
     </div>
   );
 };

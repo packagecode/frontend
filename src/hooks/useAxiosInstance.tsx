@@ -90,7 +90,6 @@ const useAxiosInstance = () => {
     (error: AxiosError) => {
       if (
         error.response?.statusText === "Unauthorized" ||
-        error.response?.status === 419 ||
         error.response?.status === 401
       ) {
         localStorage.removeItem("isLogin");
@@ -103,6 +102,15 @@ const useAxiosInstance = () => {
         localStorage.removeItem(EncryptDataTypes.ALL_PERMISSIONS_KEY);
         localStorage.removeItem(EncryptDataTypes.SETTINGS_KEY);
         navigator("/login", { replace: true });
+      }
+
+      if (error.response?.status === 403) {
+        showToast("error", "Unauthorized Access!");
+        return Promise.reject(error);
+      }
+
+      if (error.response?.status === 419) {
+        return Promise.reject(error);
       }
       // Do something with error response
       const errorMessages = (error.response?.data as any)?.errors;
@@ -117,10 +125,6 @@ const useAxiosInstance = () => {
       if (message) {
         showToast("error", message);
         return Promise.reject(error);
-      }
-
-      if (error.response?.status === 403) {
-        showToast("error", "Unauthorized Access!");
       }
       return Promise.reject(error);
     }

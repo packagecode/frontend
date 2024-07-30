@@ -204,8 +204,7 @@ export const initialState = {
     }
   ],
   apiEndPoint: import.meta.env.VITE_APP_API_ENDPOINT || "",
-  cdnEndPoint:
-    import.meta.env.VITE_APP_ASSET_URL || import.meta.env.VITE_APP_API_ENDPOINT,
+  cdnEndPoint: import.meta.env.VITE_APP_ASSET_URL,
   defaultDashboard: "dashboards",
   user: STORAGE_USER,
   roles: STORAGE_USER_ROLES,

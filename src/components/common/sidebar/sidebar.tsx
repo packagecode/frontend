@@ -16,6 +16,7 @@ const history: any = [];
 const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
   const location = useLocation();
   const [menuitems, setMenuitems] = useState<any>(MENUITEMS);
+  const cdn = import.meta.env.VITE_APP_ASSET_URL;
 
   useEffect(() => {
     history.push(location.pathname); // add history to history stack for current location.pathname to prevent multiple history calls innerWidth  and innerWidth  calls from  multiple users. This is important because the history stack is not always empty when the user clicks  the history
@@ -535,12 +536,12 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
             to={`${import.meta.env.BASE_URL}dashboards/`}
             className="header-logo"
           >
-            <img src={logo1} alt="logo" className="desktop-logo" />
-            <img src={logo2} alt="logo" className="toggle-logo" />
-            <img src={logo3} alt="logo" className="desktop-dark" />
-            <img src={logo4} alt="logo" className="toggle-dark" />
-            <img src={logo5} alt="logo" className="desktop-white" />
-            <img src={logo6} alt="logo" className="toggle-white" />
+            <img src={`${cdn}${logo1}`} alt="logo" className="desktop-logo" />
+            <img src={`${cdn}${logo2}`} alt="logo" className="toggle-logo" />
+            <img src={`${cdn}${logo3}`} alt="logo" className="desktop-dark" />
+            <img src={`${cdn}${logo4}`} alt="logo" className="toggle-dark" />
+            <img src={`${cdn}${logo5}`} alt="logo" className="desktop-white" />
+            <img src={`${cdn}${logo6}`} alt="logo" className="toggle-white" />
           </Link>
         </div>
 

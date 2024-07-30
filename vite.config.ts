@@ -6,7 +6,7 @@ import { pwaOptions } from "./pwa.config";
 
 export default defineConfig(({ mode }) => {
   // Load environment variables based on the current mode (e.g., development, production)
-  const env = loadEnv(mode, "", "");
+  const env = loadEnv(mode, process.cwd(), "");
 
   return {
     plugins: [
@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
     },
     define: {},
     build: {
-      sourcemap: true,
+      sourcemap: false,
       rollupOptions: {
         output: {
           entryFileNames: "js/[name].js",
